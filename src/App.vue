@@ -1,14 +1,30 @@
 <template>
   <div id="app">
-    <div id="nav">
+    <about />
+    <!-- <div id="nav">
       <router-link to="/">Home</router-link> |
       <router-link to="/about">About</router-link>
     </div>
-    <router-view/>
+    <router-view style="height: 100%;" /> -->
   </div>
 </template>
+<script>
+import About from './views/About.vue';
+export default {
+  name: 'VrCubaApp',
+  components: {
+    About
+  }
 
+};
+</script>
 <style lang="scss">
+html, body, #app {
+  height: 100vh;
+  padding: 0;
+  margin: 0;
+  overflow: hidden;
+}
 #app {
   font-family: Avenir, Helvetica, Arial, sans-serif;
   -webkit-font-smoothing: antialiased;
